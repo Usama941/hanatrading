@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Upload Cars</title>
+	       
+        <!-- norlimlize,gride,indecstylesheet file link -->
+	    <link rel="stylesheet" href="/normalize.css">
+        <link rel="stylesheet" href="/grid.css">
+        <!-- norlimlize,gride,indecstylesheet file link  closed-->   
+     <!-- AOS link sheet -->   
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     
+    <!-- footer icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
+        
+<style>
+    html
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    overflow-x: hidden; 
+}
+
+
+
+/* top navigation bar*/
+.section1
+    {
+     background-color: black;   
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+.topNav {
+  overflow: hidden;
+  background-color:black;
+}
+
+.topNav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px; 
+  margin:8px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#adminAnchor{
+    float: right; 
+}
+
+
+.topNav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topNav a.active {
+  
+  color: #E3882D;
+}
+
+.topNav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topNav a:not(:first-child) {display: none;}
+  .topNav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topNav.responsive {position: relative;}
+  .topNav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topNav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+    #adminAnchor {
+    float: left;
+  }
+}
+/*Top navigation bar closed*/
+  
+.carForm
+    {
+          /* Full width */
+    height: auto; position: relative;
+	left: 45%;
+	top: 70px; border-radius: 8px;
+	width:30%;
+	margin-left: -100px;
+    margin-top:30px; margin-bottom: 100px; padding-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:darkgrey;
+    opacity: 0.9;
+    }
+.carForm input
+    {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 15px;
+        display: inline-block;
+        border: 1px solid #ccc;
+    }
+.button1
+    {
+        width: 90%;
+        padding: 12px 20px;
+        margin: 8px 15px;
+        display: inline-block;
+        border:none;
+        color:white;
+        background-color: #4CAF50;
+    }
+
+@media screen and (max-width: 700px) {
+  .carForm { width:50%;
+  }
+}
+
+/*last section footer section*/
+.section7
+{
+    
+    background-color:black;
+    padding-top:70px;
+    color:white;
+}
+.left
+{
+    
+    color:white;
+}
+.center
+{
+   
+    color:white;
+}
+.right
+{
+   
+    color:white;
+}
+
+</style>
+</head>
+<body>
+        <!--topNav section-->
+
+<section class="section1">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="CompanyName" style="text-align: center; margin:5px;">
+                    <h2 style="font-size:27px; margin:15px; color:#E3882D;"><b>Admin Panel</b></h2>
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="topNav" id="myTopnav">
+                    <a href="./adminHana" >Home</a>
+                    <a href="./changePassword">Change Password</a>
+                    <a href="./carDataUpload" class="active">Add Products</a>
+                    <a href="./logout" id="adminAnchor">Log Out</a>
+                    
+                    <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+
+
+                <script>
+                    function navFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topNav") {
+                    x.className += " responsive";
+                    } else {
+                             x.className = "topNav";
+                            }
+                    }
+                </script>
+                 <!-- script for responsive menu bar-->
+                
+                
+<!-- on scroll color change of navbar-->
+                
+			</div>
+            
+            
+            <!-- menu bar responsive closed-->
+			
+			
+		</div>
+	</div>
+</section>
+<!--end topNav section-->
+        
+    
+<section class="section2">
+<div class="carForm">
+
+  <form method="POST" enctype="multipart/form-data">
+        <h3 style="text-align: center; margin-top:20px;">Add Cars details</h3>
+      
+      <input type="text" placeholder="Enter LOT Number" name="lotNumber" value="" required>
+
+     <input type="text" placeholder="Enter Model" name="carModel" value="" required>
+        
+      <input type="text" placeholder="Enter Chassis No" name="chassisNumber" value="" required>
+        
+      <input type="text" placeholder="Enter Odo Meter" name="odoMeter" value="" required>
+        
+      <input type="text" placeholder="Enter Equipment" name="equipment" value="" required>
+        
+      <input type="text" placeholder="Enter Price" name="price" value="" required>
+        
+      <input type="text" placeholder="Enter Transmission" name="transmission" value="" required>
+        
+      <input type="file" name="imageUplaod" name="imageUpload" value="" required >    
+        
+      <button class="button1" type="submit">Upload Car</button>
+      <p>{{label}}</p>
+  </form>
+</div>
+    </section>
+   <!-- footer of the page --> 
+<!-- section 7 started footer ofc the page-->
+    <section class="section7">
+        <div class="container">
+           <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+				<!-- now its your area-->
+                   <div class="left">
+                       <h3 style="margin-bottom:15px;">HANATRADING</h3>
+                       <p style="margin-bottom:40px;">Far far away, behind the word<br/> mountains, far from the countries<br/> Vokalia and Consonantia</p>
+                       <i class="fa fa-fw fa-instagram" ></i>
+                       <i class="fa fa-fw fa-facebook" ></i>
+                       <i class="fa fa-fw fa-twitter" ></i>
+                   </div>
+                   
+               </div>
+               <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6" >
+				<!-- now its your area-->
+                   <div class="center">
+                       <h3 style="margin-bottom:10px">MENU</h3>
+                       <h4 style="margin-bottom:10px">HOME</h4>
+                       <h4 style="margin-bottom:10px">Change Password</h4>
+                       <h4 style="margin-bottom:10px">Add Products</h4>
+                       <h4 style="margin-bottom:10px">Log Out</h4>
+                   </div>
+                   
+               </div>
+               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" >
+				<!-- now its your area-->
+                   <div class="center">
+                       <h3 style="margin-bottom:10px">CARS</h3>
+                       <h4 style="margin-bottom:10px">TOYOTA</h4>
+                       <h4 style="margin-bottom:10px">HONDA</h4>
+                       <h4 style="margin-bottom:10px">NISSAN</h4>
+                       <h4 style="margin-bottom:10px">OTHERS</h4>
+                   </div>
+                   
+               </div>
+               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+				<!-- now its your area-->
+                   <div class="right">
+                       <h3 style="margin-bottom:10px">HANA TRADING CO.,LTD</h3>
+                       <p style="margin-bottom:10px"><i class="fa fa-fw fa-instagram" ></i>KASUKABE-SHI YUTAKA-CH0<br/>5-7-6-103<br/>SAITAMA-KEN, JAPAN</p>
+                       <h4 style="margin-bottom:10px"><i class="fa fa-fw fa-instagram" ></i>TEL: 048-795-8434</h4>
+                       <h4 style="margin-bottom:10px"><i class="fa fa-fw fa-instagram" ></i>YAHYADANIYAL64@GMAIL.COM</h4>
+                   </div>
+                   
+               </div>
+            </div> <!-- row one is closed -->
+            
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+				<!-- now its your area-->
+                    <h3 style="text-align: center; margin:50px;">Copyright 2020 All rights reserved | This Website is Developed @ by StorkCodes </h3>
+                   
+               </div>
+            </div>
+        </div>
+    </section>
+<!-- section seven is closed-->            
+       <!-- footer of the page -->    
+            
+
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome to HANATRADING</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	       
+        <!-- norlimlize,gride,indecstylesheet file link -->
+	    <link rel="stylesheet" href="/normalize.css">
+        <link rel="stylesheet" href="/grid.css">
+        <link rel="stylesheet" href="/style.css">
+        <!-- norlimlize,gride,indecstylesheet file link  closed-->
+        
+<link rel="stylesheet" type="text/css" href="stylesheet/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="stylesheet/slick-theme.css"/>
+        
+     <!-- AOS link sheet -->   
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+    <!-- footer icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
+        
+    </head>
+    <body>
+        <!--topNav section-->
+
+<section class="TopNav">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="CompanyName" style="text-align: center; margin:25px;">
+                    <h2 style="color: white;"><b>HANA TRADING</b></h2>
+				</div>
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="navbar" id="myNavbar">
+                    <a href="#" class="active">Home</a>
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                    <a href="#cars">View Cars</a>
+                    <a href="#carColors">Colors</a>
+                    <a href="#aboutUs">About Us</a>
+                    <a href="./loginAdmin"  class="admin">Admin</a>
+                    
+                    
+                </div>
+
+                 <!-- script for responsive menu bar-->
+                <script>
+                    function myFunction() {
+                    var x = document.getElementById("myNavbar");
+                    if (x.className === "navbar") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "navbar";
+                    }
+                    }
+                </script>
+                 <!-- script for responsive menu bar-->
+                
+			</div>
+            
+            
+            <!-- menu bar responsive closed-->
+			
+			
+		</div>
+	</div>
+</section>
+<!--end topNav section-->
+   
+        <!-- slick slider -->
+<section class="slider">
+				<div class="mySlider">
+                    <img class="slides" src="/car1.jpg" style="width:100%; height:auto">
+                    <img class="slides" src="/car2.jpg" style="width:100%; height:auto">
+                    <img class="slides" src="/car3.jpg" style="width:100%; height:auto">
+                    <img class="slides" src="/car4.jpg" style="width:100%; height:auto">
+                    <img class="slides" src="/car5.jpg" style="width:100%; height:auto">
+                    <div class="tagline"><h1>HANA TRADING</h1><p style="font-size:20px;">We can offer you any car you want to buy</p></div>
+            </div>
+
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("slides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+   
+</section>        
+       <!-- slick slider ends here-->
+        
+        <!-- multi item slider-->
+ <section class="section3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+                <div class="details" data-aos="fade-up"
+                                         data-aos-duration="3400">
+                    <img src="/toyota.png" style="width:90%; height:150px;">
+					<h2>TOYOTA</h2>
+					
+				</div>
+            </div>
+             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+				<div class="details" data-aos="fade-up"
+                                         data-aos-duration="3400" >
+                    <img src="/honda.png" style="width:90%; height:150px;">
+					<h2>HONDA</h2>
+				</div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+				<div class="details" data-aos="fade-up"
+                                         data-aos-duration="3400">
+                    <img src="/nissan.png" style="widht:90%; height:150px;">
+					<h2>NISSAN</h2>
+				</div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+				<div class="details" data-aos="fade-up"
+                                         data-aos-duration="3400">
+                    <img src="/mazda.png" style="widht:90%; height:150px;">
+					<h2>MAZDA</h2>
+				</div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+				<div class="details" data-aos="fade-up"
+                                         data-aos-duration="3400">
+                    <img src="/daihatsu.png" style="width:90%; height:150px;" >
+					<h2>DAIHATSU</h2>
+				</div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+				<div class="details" data-aos="fade-up"
+                                         data-aos-duration="3400">
+                    <img src="/mazda.png" style="widht:90%; height:150px;">
+					<h2>OTHERS</h2>
+				</div>
+            </div>
+            </div>
+            
+        </div>
+    </section>      
+        <!-- multi item slider-->
+        
+        
+        <!-- products display here-->
+<section class="section4" id="cars">
+    <div class="container">
+        <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+				<div class="new_car" data-aos="fade-up"
+                                         data-aos-duration="3400" >
+					<h1>Cars We have</h1>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+				</div>
+                </div>
+            </div>
+<!-- Row1 ends here -->
+        <!-- Row2 started -->
+            <div class="row"> {{#each data}}
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+				<!-- now its your area--> 
+				    <div class="new_product" data-aos="fade-up"
+                         data-aos-duration="3400">
+                        <div class="p_img">
+                            <img src="/{{this.imageUpload}}" alt="{{this.imageUpload}}" style=" width:100%; height:307px;">
+                            <button class="pB1"><a href="./detailedAds/{{this._id}}">View Details</a></button>
+                        </div>
+                        <div class="new_productDetails">
+                            <h6>{{this.lotNumber}}</h6>
+                            <p><b>{{this.carModel}}</b></p>
+                            <p>{{this.price}}</p>
+                        </div>
+                    </div>
+                </div> {{/each}}
+        
+            </div> <!-- Row is closed-->
+        
+        
+        <!-- Row3 started --> 
+    </div>
+    
+</section>
+        <!-- products display ends here -->
+        
+        
+        <!-- color selection of car section-->
+
+<div class="colorCars" id="carColors">
+   <img src="/colorCar.jpg" style="width:100%; height:750px;">     
+</div>
+
+       <!-- color selection of car section--> 
+   
+        
+        <!-- section 6 about us -->
+<!-- section6 is started-->
+   <section class="section6" id="aboutUs">
+       <div class="container">
+           
+           <div class="row">
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+				<!-- now its your area-->
+                   <h1 data-aos="fade-up"
+                         data-aos-duration="3400" style="text-align: center; margin-top:100px;" >About Us</h1>
+                   <p data-aos="fade-up"
+                         data-aos-duration="3400" style="text-align: center; color:grey">We Deals in all cars. We deals in honda, toyota, daihatsu, mazda, hyundai, mercedes, audi and bmw etc.<br/>We we provide 100% origanal cars. with customers favourite colors.</p>
+                   
+               </div>
+           </div> <!-- row is closed-->
+       </div>   <!--container closed -->
+    </section>  <!-- section 6 closed-->        
+        <!-- section 6 about us ends here-->
+        
+        
+       <!-- footer of the page --> 
+<!-- section 7 started footer ofc the page-->
+    <section class="section7">
+        <div class="container">
+           <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+				<!-- now its your area-->
+                   <div class="left">
+                       <h3 style="margin-bottom:15px;">HANATRADING</h3>
+                       <p style="margin-bottom:40px;">Far far away, behind the word<br/> mountains, far from the countries<br/> Vokalia and Consonantia</p>
+                       <i class="fa fa-fw fa-instagram" ></i>
+                       <i class="fa fa-fw fa-facebook" ></i>
+                       <i class="fa fa-fw fa-twitter" ></i>
+                   </div>
+                   
+               </div>
+               <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6" >
+				<!-- now its your area-->
+                   <div class="center">
+                       <h3 style="margin-bottom:10px">MENU</h3>
+                       <h4 style="margin-bottom:10px">HOME</h4>
+                       <h4 style="margin-bottom:10px">CARS</h4>
+                       <h4 style="margin-bottom:10px">COLORS</h4>
+                       <h4 style="margin-bottom:10px">ABOUT US</h4>
+                   </div>
+                   
+               </div>
+               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" >
+				<!-- now its your area-->
+                   <div class="center">
+                       <h3 style="margin-bottom:10px">CARS</h3>
+                       <h4 style="margin-bottom:10px">TOYOTA</h4>
+                       <h4 style="margin-bottom:10px">HONDA</h4>
+                       <h4 style="margin-bottom:10px">NISSAN</h4>
+                       <h4 style="margin-bottom:10px">OTHERS</h4>
+                   </div>
+                   
+               </div>
+               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+				<!-- now its your area-->
+                   <div class="right">
+                       <h3 style="margin-bottom:10px">HANA TRADING CO.,LTD</h3>
+                       <p style="margin-bottom:10px"><i class="fa fa-fw fa-instagram" ></i>KASUKABE-SHI YUTAKA-CH0<br/>5-7-6-103<br/>SAITAMA-KEN, JAPAN</p>
+                       <h4 style="margin-bottom:10px"><i class="fa fa-fw fa-instagram" ></i>TEL: 048-795-8434</h4>
+                       <h4 style="margin-bottom:10px"><i class="fa fa-fw fa-instagram" ></i>YAHYADANIYAL64@GMAIL.COM</h4>
+                   </div>
+                   
+               </div>
+            </div> <!-- row one is closed -->
+            
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+				<!-- now its your area-->
+                    <h3 style="text-align: center; margin:50px;">Copyright 2020 All rights reserved | This Template is made with @ by StorkCodes </h3>
+                   
+               </div>
+            </div>
+        </div>
+    </section>
+<!-- section seven is closed-->            
+       <!-- footer of the page -->    
+        
+        
+        <!-- script for animation  on scroll-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+        AOS.init();
+     </script>
+        <!-- script for animation  on scroll-->
+        
+        
+    </body>
+</html>
